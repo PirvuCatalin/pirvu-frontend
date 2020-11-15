@@ -1,0 +1,39 @@
+@media (max-width: 600px) {
+    .full-bg-img {
+        background-position-x: 30% !important;
+    }
+    .first-paragraph {
+        padding-top: 60% !important;
+    }
+    p {
+        font-size: x-large !important;
+    }
+    .presentation-paragraph {
+        font-size: xx-large !important;
+    }
+}
+
+.full-bg-img {
+    height: 100vh;
+    background-image: url('../../../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: multiply;
+}
+
+.first-paragraph {
+    padding-top: 20%;
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    font-size: xx-large;
+}
+
+.presentation-paragraph {
+    font-size: xxx-large;
+}

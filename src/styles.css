@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    background-color: rgba(0, 0, 0, 0.79);
+}
+
+@media(min-width: 992px) {
+    .custom-padding-navbar {
+        padding: 0 20% 0 20% !important;
+    }
+}
+
+.top-nav-collapse {
+    background-color: rgba(69,69,69,0.9);
+}
+
+.last-footer-logo {
+    margin-right: 0 !important;
+}

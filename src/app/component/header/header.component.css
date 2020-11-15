@@ -1,0 +1,12 @@
+.navbar-brand {
+    color: white;
+    font-family: monospace;
+    font-size: xx-large;
+    letter-spacing: 0.5rem;
+}
+
+.navbar-nav {
+    color: white;
+    font-family: monospace;
+    font-size: large;
+}

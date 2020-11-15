@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "catalin-pirvu": {
+      "hosting": {
+        "pirvu-frontend": [
+          "catalin-pirvu"
+        ]
+      }
+    }
+  }
+}
