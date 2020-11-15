@@ -1,7 +1,5 @@
 import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 
-import * as $ from 'jquery';
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -21,28 +19,28 @@ export class HeaderComponent implements AfterViewInit {
 
   onClickHome(): void {
     this.currentActive = 'home';
-    this.home[0].scrollIntoView({ block: 'end', behavior: 'smooth' });
+    this.home.scrollIntoView({ block: 'end', behavior: 'smooth' });
   }
 
   onClickAbout(): void {
     this.currentActive = 'about';
-    this.about[0].scrollIntoView({ block: 'center', behavior: 'smooth' });
+    this.about.scrollIntoView({ block: 'center', behavior: 'smooth' });
   }
 
   onClickContact(): void {
     this.currentActive = 'contact';
-    this.contact[0].scrollIntoView({ block: 'start', behavior: 'smooth' });
+    this.contact.scrollIntoView({ block: 'start', behavior: 'smooth' });
   }
 
   ngAfterViewInit() {
-    this.home = $("#homeElement");
-    this.homeHeight = this.home.outerHeight() + 15;
+    this.home = document.getElementById("homeElement")
+    this.homeHeight = this.home.offsetHeight + 15;
 
-    this.about = $("#aboutElement");
-    this.aboutHeight = this.about.outerHeight() + 15;
+    this.about = document.getElementById("aboutElement");
+    this.aboutHeight = this.about.offsetHeight + 15;
 
-    this.contact = $("#contactElement");
-    this.contactHeight = this.contact.outerHeight() + 15;
+    this.contact = document.getElementById("contactElement");
+    this.contactHeight = this.contact.offsetHeight + 15;
   }
 
   @HostListener('window:scroll', ['$event'])
