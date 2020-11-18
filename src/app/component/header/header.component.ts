@@ -24,7 +24,7 @@ export class HeaderComponent implements AfterViewInit {
 
   onClickAbout(): void {
     this.currentActive = 'about';
-    this.about.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    this.about.scrollIntoView({ block: 'start', behavior: 'smooth' });
   }
 
   // onClickContact(): void {
