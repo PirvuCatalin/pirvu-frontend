@@ -1,5 +1,47 @@
+@media (max-width: 768px) {
+    .about-screen {
+        margin-top: -50% !important;
+        padding-top: 50% !important;
+    }
+    .img-fluid {
+        height: 31vh !important;
+    }
+}
+
 .about-screen {
-    height: 50vh;
+    background-image: url('../../../assets/about.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
+    background-blend-mode: multiply;
+    background-position-y: 50%;
+    margin-top: -20%;
+    padding-top: 20%;
+}
+
+.img-fluid {
+    max-height: 40vh;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.about-info {
+    color: white;
+    display: grid;
+}
+
+.about-info h4 {
+    font-family: monospace;
+}
+
+.about-info p {
+    font-size: large;
+    font-family: 'Font Awesome 5 Free';
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 html {
-    background-color: rgba(0, 0, 0, 0.79);
+    background-color: #191919;
 }
 
 @media(min-width: 992px) {
@@ -10,7 +10,7 @@ html {
 }
 
 .top-nav-collapse {
-    background-color: rgba(69,69,69,0.9);
+    background-color: #191919;
 }
 
 .last-footer-logo {

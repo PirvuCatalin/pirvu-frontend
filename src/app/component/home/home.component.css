@@ -14,17 +14,20 @@
 }
 
 .full-bg-img {
-    height: 100vh;
+    height: 95vh;
     background-image: url('../../../assets/background.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: multiply;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    position: relative;
 }
 
 .first-paragraph {
-    padding-top: 20%;
+    padding-top: 40vh;
 }
 
 p {
