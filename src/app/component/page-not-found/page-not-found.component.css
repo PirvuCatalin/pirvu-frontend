@@ -1,0 +1,15 @@
+img {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    background-color: #131311;
+    position: absolute;
+}
+
+button {
+        margin-top: 85vh;
+        margin-left: calc(50vw - 75px);
+        position: absolute;
+        width: 150px;
+}
