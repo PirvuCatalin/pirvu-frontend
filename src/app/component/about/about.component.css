@@ -3,8 +3,8 @@
         margin-top: -50% !important;
         padding-top: 50% !important;
     }
-    .img-fluid {
-        height: 31vh !important;
+    .image-row {
+        height: 50vw;
     }
 }
 
@@ -16,19 +16,19 @@
     background-color: rgba(0, 0, 0, 0.9);
     background-blend-mode: multiply;
     background-position-y: 50%;
-    margin-top: -20%;
-    padding-top: 20%;
+    margin-top: -32%;
+    padding-top: 32%;
 }
 
 .img-fluid {
-    max-height: 40vh;
-    margin: auto;
+    position: absolute;
     border-radius: 50%;
+    max-height: 100%;
 }
 
 .about-info {
     color: white;
-    display: grid;
+    height: fit-content;
 }
 
 .about-info h4 {

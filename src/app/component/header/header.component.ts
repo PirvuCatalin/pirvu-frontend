@@ -13,6 +13,9 @@ export class HeaderComponent implements AfterViewInit {
   aboutHeight = null;
   // contact = null;
   // contactHeight = null;
+
+  header = null;
+
   currentActive = 'home';
 
   constructor() { }
@@ -24,7 +27,12 @@ export class HeaderComponent implements AfterViewInit {
 
   onClickAbout(): void {
     this.currentActive = 'about';
-    this.about.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    // this.about.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    let positionY = this.home.offsetHeight - this.header.offsetHeight;
+    window.scrollTo({
+      top: positionY,
+      behavior: "smooth"
+    });
   }
 
   // onClickContact(): void {
@@ -41,6 +49,8 @@ export class HeaderComponent implements AfterViewInit {
 
     // this.contact = document.getElementById("contactElement");
     // this.contactHeight = this.contact.offsetHeight + 15;
+
+    this.header = document.getElementsByClassName("custom-padding-navbar")[0];
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -54,10 +64,10 @@ export class HeaderComponent implements AfterViewInit {
     //   this.currentActive = 'contact';
     // }
 
-    if (window.pageYOffset < this.homeHeight - this.aboutHeight/2 + 50) {
-      this.currentActive = 'home';
-    } else {
+    if (window.pageYOffset > this.homeHeight / 2) {
       this.currentActive = 'about';
+    } else {
+      this.currentActive = 'home';
     }
   }
 }
