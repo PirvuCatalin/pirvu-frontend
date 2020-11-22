@@ -1,5 +1,5 @@
 deployment:
  tasks:
-  - export DEPLOYPATH=/home/catalinpirv/public_html/
+  - export DEPLOYPATH=/home/catalinpirv/subdomains/frontend-dev
   - /bin/rm -Rf $DEPLOYPATH/*
   - /bin/cp -R dist/pirvu-frontend/. $DEPLOYPATH
