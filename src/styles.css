@@ -3,6 +3,25 @@ html {
     background-color: #191919;
 }
 
+body {
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: black rgba(0,0,0,0.1);   /* scroll thumb and track */ 
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: black;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid rgba(0,0,0,0.1);  /* creates padding around scroll thumb */
+}
+
 @media(min-width: 992px) {
     .custom-padding-navbar {
         padding: 0 20% 0 20% !important;
