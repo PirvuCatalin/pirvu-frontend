@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   private nameText = "I'm Cătălin Pîrvu.";
-  private jobText = "I'm a Software Developer.";
+  private jobText = "I'm a Software Engineer.";
 
   private typewriter_text: string = this.nameText;
   public typewriter_display: string = "";

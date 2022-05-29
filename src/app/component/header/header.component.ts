@@ -11,8 +11,8 @@ export class HeaderComponent implements AfterViewInit {
   homeHeight = null;
   about = null;
   aboutHeight = null;
-  // contact = null;
-  // contactHeight = null;
+  projects = null;
+  projectsHeight = null;
 
   header = null;
 
@@ -35,6 +35,16 @@ export class HeaderComponent implements AfterViewInit {
     });
   }
 
+  onClickProjects(): void {
+    this.currentActive = 'projects';
+    // this.about.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    let positionY = this.home.offsetHeight + this.about.offsetHeight - this.header.offsetHeight;
+    window.scrollTo({
+      top: positionY,
+      behavior: "smooth"
+    });
+  }
+
   // onClickContact(): void {
   //   this.currentActive = 'contact';
   //   this.contact.scrollIntoView({ block: 'start', behavior: 'smooth' });
@@ -47,27 +57,27 @@ export class HeaderComponent implements AfterViewInit {
     this.about = document.getElementById("aboutElement");
     this.aboutHeight = this.about.offsetHeight + 15;
 
-    // this.contact = document.getElementById("contactElement");
-    // this.contactHeight = this.contact.offsetHeight + 15;
+    this.projects = document.getElementById("projectsElement");
+    this.projectsHeight = this.projects.offsetHeight + 15;
 
     this.header = document.getElementsByClassName("custom-padding-navbar")[0];
   }
 
   @HostListener('window:scroll', ['$event'])
   checkOffsetTop() {
-    // //this needs to be edited if we add more components
-    // if (window.pageYOffset < this.homeHeight - this.aboutHeight) {
-    //   this.currentActive = 'home';
-    // } else if (window.pageYOffset > (this.homeHeight - this.aboutHeight) && window.pageYOffset < (this.homeHeight + this.aboutHeight - this.contactHeight)) {
-    //   this.currentActive = 'about';
-    // } else {
-    //   this.currentActive = 'contact';
-    // }
-
-    if (window.pageYOffset > this.homeHeight / 2) {
+    //this needs to be edited if we add more components
+    if (window.pageYOffset < this.homeHeight - this.aboutHeight) {
+      this.currentActive = 'home';
+    } else if (window.pageYOffset > (this.homeHeight - this.aboutHeight) && window.pageYOffset < (this.homeHeight + this.aboutHeight - this.projectsHeight)) {
       this.currentActive = 'about';
     } else {
-      this.currentActive = 'home';
+      this.currentActive = 'projects';
     }
+
+    // if (window.pageYOffset > this.homeHeight / 2) {
+    //   this.currentActive = 'about';
+    // } else {
+    //   this.currentActive = 'home';
+    // }
   }
 }

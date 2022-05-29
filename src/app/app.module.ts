@@ -11,6 +11,7 @@ import { ContactComponent } from './component/contact/contact.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { MainPageComponent } from './component/main-page/main-page.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
+import { ProjectsComponent } from './component/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
     HomeComponent,
     AboutComponent,
     ContactComponent,
+    ProjectsComponent,
     FooterComponent,
     MainPageComponent,
     PageNotFoundComponent
